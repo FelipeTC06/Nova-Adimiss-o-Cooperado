@@ -1,0 +1,109 @@
+<div class="consulta">
+    <div class="header-consulta">
+        <h1 class="title">Informe o CPF do futuro cooperado(a)</h1>
+        <p class="subtitle">
+            Se necessário, você poderá duplicar uma conta existente ou pausar e
+            retomar este cadastro futuramente. <br />
+            Digite apenas os números (sem pontos ou traços)
+        </p>
+    </div>
+
+    <div class="input-search">
+        <h4 class="label">CPF</h4>
+        <form [formGroup]="formGroup">
+            <div class="btn-input">
+                <div class="inp">
+                    <input class="w-100 h-100" name="cpf" formControlName="cpf" placeholder="000.000.000-00"
+                        maxlength="14" />
+                    <p *ngIf="error == 'notfound'" class="Error">
+                        Não existe usuário cadastrado com esse CPF!
+                    </p>
+                    <p *ngIf="error == 'error'" class="Error">
+                        Houve algum erro ao consultar!
+                    </p>
+                </div>
+                <button class="btn-buscar" type="button" (click)="consultaCpf()">
+                    Consultar CPF
+                </button>
+            </div>
+        </form>
+    </div>
+    <div class="cards-disp" *ngFor="let cooperado of cooperados">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Situação Cadastral do CPF</h5>
+                <span class="card-subtitle">Consulta da Receita Federal</span>
+                <div class="card-text">
+                    <div class="info-situ">
+                        <div class="">
+                            <i class="fas fa-user fa-lg "></i>
+                        </div>
+                        <div class="">
+                            <small class="">Nome</small>
+                            <div class="info-coop">
+                                {{ cooperado.name }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-text">
+                    <div class="info-situ">
+                        <div class="">
+                            <i class="far fa-check-circle fa-lg text-success"></i>
+                        </div>
+                        <div class="">
+                            <small class="">Situação do CPF</small>
+                            <div class="info-coop">
+                                {{ cooperado.status }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Conta aplicação</h5>
+                <span class="card-subtitle">Cooperativa Viacredi</span>
+                <div class="card-text">
+                    <div class="info-situ">
+                        <div class="">
+                            <i class="fas fa-credit-card fa-lg"></i>
+                        </div>
+                        <div class="">
+                            <small class="">Número da conta</small>
+                            <div class="info-coop">
+                                {{ cooperado.contaAplicacao }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-text">
+                    <button type="button" class="btn btn-link btn-lg fw-bold">Duplicar conta</button>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Conta corrente</h5>
+                <span class="card-subtitle">Cooperativa Viacredi</span>
+                <div class="card-text">
+                    <div class="info-situ">
+                        <div class="">
+                            <i class="fas fa-credit-card fa-lg"></i>
+                        </div>
+                        <div class="">
+                            <small class="">Número da conta</small>
+                            <div class="info-coop">
+                                {{ cooperado.contaCorrente }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-text">
+                    <button type="button" class="btn btn-link btn-lg fw-bold">Duplicar conta</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

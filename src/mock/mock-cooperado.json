@@ -1,0 +1,36 @@
+{
+    "cooperado": [
+      {
+        "id": 1,
+        "cpf": "18679239291",
+        "name": "Felipe Torres Cresto",
+        "status": "regular",
+        "contaCorrente": "111111-1",
+        "contaAplicacao": "222222-1"
+      },
+      {
+        "id": 2,
+        "cpf": "12345678901",
+        "name": "Maria Silva",
+        "status": "irregular",
+        "contaCorrente": "333333-2",
+        "contaAplicacao": "444444-2"
+      },
+      {
+        "id": 3,
+        "cpf": "98765432109",
+        "name": "João Oliveira",
+        "status": "regular",
+        "contaCorrente": "555555-3",
+        "contaAplicacao": "666666-3"
+      },
+      {
+        "id": 4,
+        "cpf": "55555555555",
+        "name": "Ana Santos",
+        "status": "irregular",
+        "contaCorrente": "777777-4",
+        "contaAplicacao": "888888-4"
+      }
+    ]
+  }

@@ -1,0 +1,54 @@
+.consulta {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: 55vh;
+
+    .input-search {
+
+        .btn-input {
+            display: flex;
+            width: 34vw;
+            align-items: flex-start;
+            justify-content: space-between;
+            height: 35px;
+
+            .inp {
+                width: 350px;
+                height: 100%;
+            }
+
+            .btn-buscar {
+                color: white;
+                background-color: #99c7e8;
+                border: none;
+                width: 160px;
+                height: 100%;
+            }
+        }
+    }
+
+    .cards-disp {
+        display: flex;
+        flex-direction: row;
+        width: 55vw;
+        gap: 15px;
+
+        .card {
+            width: 33%;
+
+            .info-situ {
+                display: flex;
+                flex-direction: row;
+                gap: 10px;
+                justify-content: flex-start;
+                align-items: center;
+
+                .info-coop {
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+
+}

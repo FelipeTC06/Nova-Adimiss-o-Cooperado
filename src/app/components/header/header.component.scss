@@ -1,0 +1,21 @@
+.header {
+	display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+
+	.user-end {
+		.text-end {
+			.user-button {
+				.img-user {
+					height: 50px;
+					width: 50px;
+				}
+				.user-sett {
+					position: relative;
+					top: 20px;
+					right: 10px;
+				}
+			}
+		}
+	}
+}
