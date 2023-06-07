@@ -13,7 +13,7 @@ export class ListConsultaComponent implements OnInit {
 
   formGroup!: FormGroup;
   cooperados?: Cooperado[];
-  error?: string;
+  error?: boolean;
   cpfPattern = '([0-9]{2}[.]?[0-9]{3}[.]?[0-9]{3}[/]?[0-9]{4}[-]?[0-9]{2})|([0-9]{3}[.]?[0-9]{3}[.]?[0-9]{3}[-]?[0-9]{2})';
 
   public constructor(
@@ -33,22 +33,22 @@ export class ListConsultaComponent implements OnInit {
   }
 
   public consultaCpf() {
-    this.error = undefined;
+    this.error = false;
     this.cooperados = undefined;
 
     if (this.isCpfNull()) {
-      this.error = 'required';
+      this.error = true;
       return;
     }
 
     if (this.isCpfInValid()) {
-      this.error = 'pattern';
+      this.error = true;
       return;
     }
     const cpfValue = this.sanitizeCpf(this.cpfControl?.value);
 
     if (!cpf.isValid(cpfValue)) {
-      this.error = 'CPF inválido';
+      this.error = true;
       return;
     }
 
@@ -58,8 +58,8 @@ export class ListConsultaComponent implements OnInit {
       },
       error: (err) => {
         console.log('Erro na requisição:', err);
-        this.error = 'Ocorreu um erro na requisição.';
-      },
+        this.error = true;
+       },
     });
   }
 

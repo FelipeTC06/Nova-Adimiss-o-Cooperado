@@ -9,7 +9,7 @@ import { Cooperado } from '../types/cooperado';
 })
 export class ApiCooperadoService {
 
-  private url = environment.apiCooperadoUrl;
+  public url = environment.apiCooperadoUrl;
 
   constructor(private http: HttpClient) { }
 
