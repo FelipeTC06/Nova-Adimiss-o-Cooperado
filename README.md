@@ -1,27 +1,47 @@
-# NovaAdimissaoCooperado
+# Desafio - Consulta de CPF
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.10.
+Este projeto foi desenvolvido como parte de um teste para uma empresa, e consiste na implementação de duas páginas: uma página de consulta de CPF e uma página de exibição de dados do cooperado.
 
-## Development server
+## Funcionalidades
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- Na primeira página, o usuário pode inserir um CPF no formulário de consulta.
+  - Caso o CPF inserido não seja válido, uma mensagem de erro é exibida na tela.
+  - Caso o CPF seja válido, o usuário é direcionado para a segunda página.
+  
+- Na segunda página, após inserir um CPF válido, os dados do cooperado são carregados e exibidos.
 
-## Code scaffolding
+## Interface
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+A interface do projeto segue o seguinte modelo:
 
-## Build
+- Página de Consulta de CPF:
+  - [Descreva aqui a interface da página de consulta de CPF]
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- Página de Dados do Cooperado:
+  - [Descreva aqui a interface da página de dados do cooperado]
 
-## Running unit tests
+## Tecnologias Utilizadas
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- Angular: [versão utilizada]
+- Outras dependências e bibliotecas utilizadas
 
-## Running end-to-end tests
+## Executando o Projeto
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Para executar o projeto em seu ambiente local, siga as instruções abaixo:
 
-## Further help
+1. Faça o clone deste repositório.
+2. Instale as dependências utilizando o comando [comando de instalação].
+3. Execute o projeto utilizando o comando [comando de execução].
+4. Acesse o aplicativo no navegador através da URL [URL local].
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+**Observação:** Para testar a funcionalidade de consulta de CPF, utilize um dos seguintes CPFs que estão disponíveis no mock de dados: `186.729.437-08` ou `178.756.627-70`.
+
+## Contribuição
+
+Contribuições são sempre bem-vindas! Se você deseja contribuir para este projeto, siga as etapas abaixo:
+
+1. Faça um fork do repositório.
+2. Crie uma branch para suas alterações: `git checkout -b minha-feature`.
+3. Faça commit das suas alterações: `git commit -m 'Implementar funcionalidade X'`.
+4. Faça push para a branch: `git push origin minha-feature`.
+5. Abra um pull request.
