@@ -13,13 +13,11 @@
         <form [formGroup]="formGroup">
             <div class="btn-input">
                 <div class="inp">
-                    <input class="w-100 h-100" name="cpf" formControlName="cpf" placeholder="000.000.000-00"
-                        maxlength="14" />
-                    <p *ngIf="error == 'notfound'" class="Error">
-                        Não existe usuário cadastrado com esse CPF!
-                    </p>
-                    <p *ngIf="error == 'error'" class="Error">
-                        Houve algum erro ao consultar!
+                    <input class="w-100 h-100" type="text" name="cpf" formControlName="cpf" placeholder="000.000.000-00"
+                        maxlength="14" (keydown)="preventNonNumericInput($event)"
+                        (input)="this.error = undefined; maskCpf()" />
+                    <p *ngIf="error" class="erro-search">
+                        CPF INVALIDO, porfavor insira um cpf válido e resgistrado!
                     </p>
                 </div>
                 <button class="btn-buscar" type="button" (click)="consultaCpf()">

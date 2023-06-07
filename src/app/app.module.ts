@@ -24,7 +24,7 @@ import { ProgressBarComponent } from './components/progress-bar/progress-bar.com
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
